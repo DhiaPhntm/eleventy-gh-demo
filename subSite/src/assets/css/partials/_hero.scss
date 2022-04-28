@@ -1,0 +1,122 @@
+.hero {
+  &__container {
+    position: relative;
+
+    @include bp("sm") {
+      background: #ffffff url(/images/backgrounds/hero-bg.svg) no-repeat center;
+    }
+  }
+
+  &__content {
+    margin: auto;
+    max-width: $max-width;
+    width: 100%;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include bp("sm") {
+      align-items: flex-start;
+    }
+  }
+
+  &__desktop-logo {
+    display: none;
+
+    @include bp("sm") {
+      display: block;
+      height: 88px;
+      margin-left: 80px;
+      width: 216px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 42px;
+    padding: 0 20px;
+
+    @include bp("xs") {
+      margin-top: 20px;
+    }
+
+    @include bp("sm") {
+      align-items: center;
+      display: flex;
+      margin: 75px auto auto auto;
+      padding: 0;
+      width: 80%;
+
+      > * {
+        width: 50%;
+      }
+    }
+  }
+
+  &__title {
+    color: $primary-blue;
+    font-size: 70px;
+    line-height: 60px;
+
+    @include bp("xs") {
+      font-size: 55px;
+      line-height: 45px;
+    }
+
+    @include bp("sm") {
+      font-size: 130px;
+      line-height: 110px;
+    }
+
+    @include bp("lg") {
+      font-size: 170px;
+      line-height: 145px;
+    }
+  }
+
+  &__subheader {
+    font-size: 14px;
+    margin-top: 20px;
+
+    @include bp("sm") {
+      font-size: 26px;
+      line-height: 40px;
+      max-width: 590px;
+    }
+  }
+
+  &__diagram {
+    margin: 48px 0;
+    max-width: 500px;
+
+    @include bp("xs") {
+      margin: 10px 0;
+    }
+
+    @include bp("sm") {
+      max-width: 700px;
+      margin: 0 0 0 120px;
+    }
+  }
+
+  &__diagram-img {
+    width: 100%;
+
+    @include bp("xs") {
+      width: 80%;
+    }
+  }
+
+  &__scroll-cta {
+    display: none;
+
+    @include bp("sm") {
+      bottom: 50px;
+      display: block;
+      position: absolute;
+      right: 80px;
+    }
+  }
+}

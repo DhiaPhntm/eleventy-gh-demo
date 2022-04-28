@@ -1,0 +1,29 @@
+---
+title: GRR Rapid response
+layout: default.njk
+---
+
+<div class="grid__wrapper">
+{% for key, val in features %}
+<div class="grid__container">
+  <div class="grid__max-width">
+    <div class="grid__pagination parallel">
+        <span class="skew">0{{ loop.index }}</span>
+    </div>
+    <h2 class="grid__title">{{ key }}</h2>
+    <div class="grid__block">
+        {% for item in val %}
+        <div class="grid__information">
+            <p class="grid__header">{{ item.header }}</p>
+            <p class="grid__description">{{ item.description | safe }}</p>
+        </div>
+         {% endfor %}
+    </div>
+  </div>
+</div>    
+{% if loop.index == 1 %}
+    {% include "../_includes/carousel.njk" %}
+{% endif %}
+{% endfor %}
+</div>
+

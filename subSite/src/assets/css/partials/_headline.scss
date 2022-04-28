@@ -1,0 +1,31 @@
+.headline {
+  &__container {
+    align-items: center;
+    background: linear-gradient(90deg, $coral 4.48%, $primary-blue 97.96%);
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    justify-content: center;
+    margin-bottom: 22px;
+
+    @include bp("sm") {
+      flex-direction: row;
+      height: 35px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-size: 12px;
+    line-height: 12px;
+
+    &:first-child {
+      margin-bottom: 5px;
+
+      @include bp("sm") {
+        margin: 0 27px 0 0;
+      }
+    }
+  }
+}

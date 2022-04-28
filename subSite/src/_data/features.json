@@ -1,0 +1,52 @@
+{
+  "Live forensics": [
+    {
+      "header": "Search, list, and collect files",
+      "description": "Search for files based on criteria like path, regex and content matching. List directories or the whole hard disk timeline. Collect the contents of regular files and special OS primitives like devices and alternate data streams. Parse NTFS file systems to read locked files on Windows."
+    },
+    {
+      "header": "List processes, network connections, and named pipes",
+      "description": "Get insights into what's happening on an endpoint. Search for and list processes, enumerate open network connections and list special OS primitives like named pipes."
+    },
+    {
+      "header": "Collect forensic artifacts, run osquery",
+      "description": "Use predefined recipes for forensic data collection <a class='grid__link' href='https://github.com/ForensicArtifacts/artifacts' target='_blank' rel='noopener noreferrer'>(ForensicArtifacts)</a>, create your own to quickly and reproducibly gather forensic evidence, and send queries to <a class='grid__link' href='http://osquery.io' target='_blank' rel='noopener noreferrer'>osquery</a>."
+    },
+    {
+      "header": "Memory forensics",
+      "description": "Scan the memory of running processes for indicators of compromise with <a class='grid__link' href='https://github.com/VirusTotal/yara' target='_blank' rel='noopener noreferrer'>yara</a> and dump the memory pages for further forensic analysis."
+    }
+  ],
+  "At Scale": [
+    {
+      "header": "Check & collect data on thousands of endpoints",
+      "description": "Schedule Hunts on your whole fleet and offline endpoints will pick up the hunt when you’re back online."
+    },
+    {
+      "header": "Low latency communication",
+      "description": "Send commands to endpoints and receive data collection results in seconds through <a class='grid__link' href='https://github.com/google/fleetspeak' target='_blank' rel='noopener noreferrer'>Fleetspeak.</a>"
+    },
+    {
+      "header": "Periodic fleet checks",
+      "description": "Configure cron jobs to repeat hunts periodically, turning one-off investigations into  regular checks."
+    },
+    {
+      "header": "For security teams of any size",
+      "description": "Enable advanced features like <a class='grid__link' href='https://grr-doc.readthedocs.io/en/v3.4.5.1/maintaining-and-tuning/approval-based-workflow.html' target='_blank' rel='noopener noreferrer'>multi-party authorization with approvals</a> and <a class='grid__link' href='https://grr-doc.readthedocs.io/en/v3.2.1/maintaining-and-tuning/user-management/authentication.html' target='_blank' rel='noopener noreferrer'>pluggable authentication</a> when your security team grows."
+    }
+  ],
+  "Anywhere": [
+    {
+      "header": "Deploy agents to all major operating systems",
+      "description": "Run agents on Debian, Ubuntu and CentOS-based Linux distributions, macOS and Windows."
+    },
+    {
+      "header": "Pre-packaged, single-file installers for all operating systems",
+      "description": "Download the pre-packaged installer from the GRR web application after setting up your installation."
+    },
+    {
+      "header": "Secure communication between client and server",
+      "description": "Agents have the GRR server's address and certificate baked in for secure communication. All communication is encrypted."
+    }
+  ]
+}

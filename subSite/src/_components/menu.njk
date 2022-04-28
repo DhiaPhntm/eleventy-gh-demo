@@ -1,0 +1,23 @@
+{% macro menu(class) -%}
+
+ <a class="parallel {{ class }}" href="https://github.com/google/grr" target="_blank" rel="noopener noreferrer">
+    <span class="skew">
+        {% include "../_includes/svg/github.svg" %}
+        <span>Github</span>
+        {# <span class="github-star">{{ github.stargazers }}k</span> #}
+    </span>
+</a>
+<a class="parallel {{ class }}" href="https://grr-doc.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">
+    <span class="skew">
+        {% include "../_includes/svg/documentation.svg" %}
+        <span>Documentation</span>
+    </span>
+</a>
+<a class="parallel {{ class }}" href=" https://groups.google.com/forum/#!forum/grr-users" target="_blank" rel="noopener noreferrer">
+    <span class="skew">
+        {% include "../_includes/svg/google-group.svg" %}
+        <span>Google Group</span>
+    </span>
+</a>
+    
+{% endmacro %}

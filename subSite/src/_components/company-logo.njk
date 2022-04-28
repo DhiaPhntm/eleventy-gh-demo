@@ -1,0 +1,11 @@
+{% macro companyLogo(title, info, src, alt, href) -%}
+
+<a href={{ href }} target="_blank" rel="noopener noreferrer" class="companyLogo__container">
+    <img class="companyLogo__img" src={{ src }} alt={{ alt }} />
+    <div class="companyLogo__info">
+        <p class="companyLogo__title">{{ title }}</p>
+        <p class="companyLogo__tagline">{{ info }}</p>
+    </div>
+</a>
+
+{% endmacro %}

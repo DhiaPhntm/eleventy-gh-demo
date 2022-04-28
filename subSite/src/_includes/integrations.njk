@@ -1,0 +1,70 @@
+{% from "../_components/company-logo.njk" import companyLogo %}
+
+<div class="overlap-container">
+    <div class="overlap-background"></div>
+    <div class="companyLogos__background">
+        <div class="companyLogos__container parallel">
+            <span class="skew">
+                <p class="companyLogos__header">GRR integrates seamlessly with</p>
+                <div class="companyLogos__wrapper">
+                    {{ companyLogo(
+                        title = "Colab",
+                        info = "Execute workflows and process collected data with Colab",
+                        src = "/images/company-logos/colab-logo.svg",
+                        alt = "Colab Logo",
+                        href = "https://grr-doc.readthedocs.io/en/latest/investigating-with-grr/interactive-scripting.html"
+                    ) }}
+                    {{ companyLogo(
+                        title = "Splunk",
+                        info = "Export data to Splunk",
+                        src = "/images/company-logos/splunk-logo.svg",
+                        alt = "Splunk Logo",
+                        href = "https://grr-doc.readthedocs.io/en/latest/investigating-with-grr/output-plugins.html#splunk"
+                    ) }}
+                    {{ companyLogo(
+                        title = "BigQuery",
+                        info = "Export data to BigQuery",
+                        src = "/images/company-logos/big-query-logo.svg",
+                        alt = "BigQuery Logo",
+                        href = "https://grr-response.blogspot.com/2015/11/using-bigquery-to-analyze-data.html"
+                    ) }}
+                    {{ companyLogo(
+                        title = "ElasticSearch",
+                        info = "Export data to ElasticSearch",
+                        src = "/images/company-logos/elastic-search-logo.svg",
+                        alt = "ElasticSearch Logo",
+                        href = "https://github.com/google/grr/pull/923"
+                    ) }}
+                    {{ companyLogo(
+                        title = "Timesketch",
+                        info = "Analyze results with Timesketch",
+                        src = "/images/company-logos/timesketch-logo.svg",
+                        alt = "Timesketch Logo",
+                        href = "https://timesketch.org/"
+                    ) }}
+                    {{ companyLogo(
+                        title = "Turbinia",
+                        info = "Analyze results with Turbinia",
+                        src = "/images/company-logos/turbinia-logo.svg",
+                        alt = "Turbinia Logo",
+                        href = "https://github.com/google/turbinia"
+                    ) }}
+                    {{ companyLogo(
+                        title = "Python",
+                        info = "Call GRR API through Python API",
+                        src = "/images/company-logos/python-logo.svg",
+                        alt = "Python Logo",
+                        href = "https://github.com/google/grr/tree/master/api_client/python"
+                    ) }}
+                    {{ companyLogo(
+                        title = "OpenAPI",
+                        info = "Call GRR's RESTful API through HTTPS with OpenAPI definitions",
+                        src = "/images/company-logos/openAPI-logo.svg",
+                        alt = "OpenAPI Logo",
+                        href = "https://storage.googleapis.com/autobuilds-grr-openapi/documentation/openapi_documentation.html"
+                    ) }}
+                </div>
+            </span>
+        </div>
+    </div>
+</div>

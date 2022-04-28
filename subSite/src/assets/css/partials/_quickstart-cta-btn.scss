@@ -1,0 +1,62 @@
+.quickstart-cta {
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 14px;
+
+    @include bp("sm") {
+      align-items: baseline;
+      font-size: 20px;
+      margin: 70px auto auto auto;
+      width: 80%;
+    }
+
+    .burger-overlay-screen & {
+      bottom: 0;
+      color: $white;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    background: linear-gradient(90deg, $coral 4.48%, $primary-blue 97.96%);
+    color: $white;
+    cursor: pointer;
+    font-size: 13px;
+    height: 48px;
+    margin: 14px 0 72px 0;
+    width: 80%;
+
+    @include bp("xs") {
+      margin: 10px 0 50px 0;
+    }
+
+    @include bp("sm") {
+      font-size: 18px;
+      height: 63px;
+      margin: 26px 0 120px 0;
+      width: 241px;
+    }
+
+    &::before {
+      background: linear-gradient(
+        115.72deg,
+        $primary-blue -33.95%,
+        $primary-blue 55.05%
+      );
+    }
+
+    .burger-overlay-screen & {
+      background: $white;
+      color: $primary-blue;
+
+      &::before {
+        background: $white;
+      }
+    }
+  }
+}

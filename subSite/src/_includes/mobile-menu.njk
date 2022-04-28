@@ -1,0 +1,22 @@
+{% from "../_components/menu.njk" import menu %}
+{% from "../_components/quickstart-cta-btn.njk" import ctaBtn %}
+
+<div class="burger-menu burger-menu__container">
+    <div class="burger-menu__logo">
+        {% include "../_includes/svg/logo.svg" %}
+    </div>
+    <input class="burger-menu__toggle" type="checkbox" />
+    <label class="burger-menu__btn parallel" for="burger">
+        <div class="skew">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </label>
+    <nav class="burger-menu__overlay">    
+        <div class="burger-menu__items">
+            {{ menu( class = "burger-menu__item" ) }}
+        </div>  
+        {{ ctaBtn( class = "parallel" ) }}
+    </nav>
+</div>

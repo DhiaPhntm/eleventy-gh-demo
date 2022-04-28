@@ -1,0 +1,30 @@
+{% from "../_components/blog-post.njk" import blogPost %}
+
+<section class="blog-post__container">
+    <div class="blog-post__max-width">
+        <h2 class="blog-post__header">Latest updates</h2>
+        <div class="blog-post__wrapper">
+        {{ blogPost(
+            title = "New release 2.3.4.5",
+            description = "Kubernetes (k8s) is being used to run more and more infrastructure in the cloud.",
+            src="/images/blog/image-one.svg",
+            alt = "alt text",
+            href = "https://osdfir.blogspot.com/2020/10/deploying-grr-to-kubernetes-for.html"
+        ) }}
+        {{ blogPost(
+            title = "How Spotify uses GRR",
+            description = "Incident responders want to have as much information as possible to ease the investigation and triage process.",
+            src="/images/blog/image-two.svg",
+            alt = "alt text",
+            href = "https://engineering.atspotify.com/2019/04/whacking-a-million-moles-automated-incident-response-infrastructure-in-gcp/"
+        ) }}
+        {{ blogPost(
+            title = "GRR on the Google blog",
+            description = "Kubernetes (k8s) is being used to run more and more infrastructure in the cloud.",
+            src="/images/blog/image-one.svg",
+            alt = "alt text",
+            href = "https://osdfir.blogspot.com/2020/10/deploying-grr-to-kubernetes-for.html"
+        ) }}
+        </div>
+    </div>
+</section>

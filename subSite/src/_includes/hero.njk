@@ -1,0 +1,31 @@
+{% from "../_components/menu.njk" import menu %}
+{% from "../_components/quickstart-cta-btn.njk" import ctaBtn %}
+
+<section class="hero__container">
+   <a href="https://github.com/google/grr" class="headline__container" target="_blank" rel="noopener noreferrer">
+        <p class="headline__text">2022-05-05 - GRR release v.3.4.5.1</p>
+        <p class="headline__text">Try the new Material Design user interface</p>
+    </a>
+    <div class="hero__content">
+        {% include "../_includes/mobile-menu.njk" %}
+        <div class="hero__header">
+            <img class="hero__desktop-logo" src="/images/grr-logo/grr-logo-blue.svg" alt="GRR Logo" />
+            <div class="menu__container desktop">
+            {{ menu( class ="menu__item hover-interaction") }}
+            </div>
+        </div>
+        <div class="hero__wrapper">
+            <div>
+                <h1 class="hero__title">Live forensics,<br>at scale.</h1>
+                <p class="hero__subheader">
+                We’re an open-source endpoint agent & digital forensics platform built by Google.
+                </p>
+            </div>
+            <div class="hero__diagram">
+                <img class="hero__diagram-img" src="/images/hero/hero-diagram.svg" alt="Workflow diagram" />
+            </div>
+        </div>
+        {{ ctaBtn( class ="hover-interaction parallel") }}
+        <img class="hero__scroll-cta" src="/images/hero/scroll-cta.svg" alt="Scroll down prompt" />
+    </div>
+</section>

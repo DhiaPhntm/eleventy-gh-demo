@@ -1,0 +1,9 @@
+{% macro blogPost(title, description, src, alt, href) -%}
+
+<a class="blog-post" href={{ href }}>
+    <img src={{ src }} alt={{ alt }} class="blog-post__img"/>
+    <p class="blog-post__title">{{ title }}</p>
+    <p class="blog-post__description">{{ description }}</p>
+</a>
+
+{% endmacro %}

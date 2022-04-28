@@ -1,0 +1,61 @@
+$delay: 0.12s;
+
+.menu {
+  &__container {
+    justify-content: end;
+    margin-right: 80px;
+
+    &.desktop {
+      display: none;
+
+      @include bp("sm") {
+        display: flex;
+      }
+    }
+  }
+
+  &__item {
+    align-items: center;
+    background: $primary-blue;
+    border: 1px solid $secondary-black;
+    color: $secondary-black;
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    height: 48px;
+    margin-right: 12px;
+    width: 180px;
+    will-change: transform;
+
+    &::before {
+      background: $white;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: $white;
+      border-color: $primary-blue;
+
+      svg > * {
+        fill: $white;
+        stroke: $white;
+      }
+
+      .github-star {
+        border: 1px solid $white;
+
+        &:before {
+          background: $primary-blue;
+          -webkit-transition-delay: $delay;
+          -moz-transition-delay: $delay;
+          -ms-transition-delay: $delay;
+          -o-transition-delay: $delay;
+          transition-delay: $delay;
+        }
+      }
+    }
+  }
+}

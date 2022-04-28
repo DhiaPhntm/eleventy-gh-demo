@@ -1,0 +1,33 @@
+$screen-xs: 350px;
+$screen-sm: 1024px;
+$screen-md: 1200px;
+$screen-lg: 1920px;
+
+$grid-type-list: ("xs", $screen-xs), ("sm", $screen-sm), ("md", $screen-md),
+  ("lg", $screen-lg);
+
+$breakpoints: (
+  "xs": (
+    max-width: $screen-xs,
+  ),
+  "sm": (
+    min-width: $screen-sm,
+  ),
+  "md": (
+    min-width: $screen-md,
+  ),
+  "lg": (
+    min-width: $screen-lg,
+  ),
+) !default;
+
+@mixin bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
