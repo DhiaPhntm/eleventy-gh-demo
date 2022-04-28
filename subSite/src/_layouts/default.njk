@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GRR Rapid Response</title>
     <meta name="description" content="Google Rapid Response Landing Page" />
-    <link rel="stylesheet" href="/assets/main.css?{{ cacheBust.mainCss }}" />
-    <link rel="stylesheet" href="/assets/vendor.css?{{ cacheBust.vendorCss }}" />
+    <link rel="stylesheet" href="{{ '/assets/main.css?{{ cacheBust.mainCss }}' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/vendor.css?{{ cacheBust.vendorCss }}' | url }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -16,19 +16,13 @@
   </head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDL57GK5J8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DDL57GK5J8', { 'anonymize_ip': true });
-  </script>
   <body>
     {% include "../_includes/hero.njk" %}
     <main>{{ content | safe }}</main>
     {% include "../_includes/integrations.njk" %}
     {% include "../_includes/blog.njk" %}
     {% include "../_includes/footer.njk" %}
-    <script src="/assets/vendor.js?{{ cacheBust.vendorJs }}"></script>
-    <script src="/assets/main.js?{{ cacheBust.mainJs }}"></script>
+    <script src="{{ '/assets/vendor.js?{{ cacheBust.vendorJs }}' | url }}"></script>
+    <script src="{{ '/assets/main.js?{{ cacheBust.mainJs }}' | url }}"></script>
   </body>
 </html>
