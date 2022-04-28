@@ -6,13 +6,13 @@
   "scripts": {
     "build:assets": "webpack --config webpack.config.prod.js",
     "build:site": "ELEVENTY_ENV=production npx eleventy",
-    "build:gh": "env NODE_ENV=production npx eleventy --pathprefix 'eleventy-gh-demo'",
+    "build:gh": "ELEVENTY_ENV=production npx eleventy --pathprefix 'eleventy-gh-demo'",
     "del:assets": "rimraf ./src/compiled-assets",
     "del:dist": "rimraf ./dist",
     "dev": "npm run dev:assets & npm run dev:site",
     "dev:assets": "webpack --config webpack.config.dev.js",
     "dev:site": "ELEVENTY_ENV=development npx eleventy --serve",
-    "prod": "npm-run-all del:dist del:assets build:assets build:site",
+    "prod": "npm-run-all del:dist del:assets build:assets build:gh",
     "serve:prod": "serve ./dist/",
     "lint": "npx prettier --write"
   },
