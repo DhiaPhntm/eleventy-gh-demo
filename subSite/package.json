@@ -6,7 +6,7 @@
   "scripts": {
     "build:assets": "webpack --config webpack.config.prod.js",
     "build:site": "ELEVENTY_ENV=production npx eleventy",
-    "build:gh": "env NODE_ENV=production npx eleventy --pathprefix 'eleventy-test-subsite'",
+    "build:gh": "env NODE_ENV=production npx eleventy --pathprefix 'eleventy-gh-demo'",
     "del:assets": "rimraf ./src/compiled-assets",
     "del:dist": "rimraf ./dist",
     "dev": "npm run dev:assets & npm run dev:site",
